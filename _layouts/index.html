@@ -9,18 +9,45 @@
 
     <section class="container">
         {% for post in site.posts %}
-          <article class="post-thumbnail {{post.position}}">
-            <div class="post-media">
-              <img src="{{ post.media }}" />
-            </div>
-            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <ul class="post-info">
-              <li class="post-infoItem">ISO {{ post.iso }}</li>
-              <li class="post-infoItem">f / {{ post.f }}</li>
-              <li class="post-infoItem">{{ post.f }} sec</li>
-            </ul>
-            <div class="post-description">{{ post.content }}</div>
-          </article>
+          {% if post.position == 'full' %}
+            <article class="post-thumbnail {{post.position}}">
+              <div class="post-media">
+                <img src="{{ post.media }}" />
+              </div>
+              <div class="grid grid-inner">
+                  <div class="grid-cell grid-cell--col5">
+                    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <ul class="post-info">
+                      <li class="post-infoItem">ISO {{ post.iso }}</li>
+                      <li class="post-infoItem">f / {{ post.f }}</li>
+                      <li class="post-infoItem">{{ post.f }} sec</li>
+                    </ul>
+                  </div>
+                  <div class="grid-cell grid-cell--col7">
+                    <div class="post-description">{{ post.content }}</div>
+                  </div>
+              </div>
+            </article>
+          {% elsif post.position == 'right' %}
+            <article class="post-thumbnail {{post.position}}">
+              <div class="grid grid-inner grid-inner--vend">
+                  <div class="grid-cell grid-cell--col5">
+                    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <ul class="post-info">
+                      <li class="post-infoItem">ISO {{ post.iso }}</li>
+                      <li class="post-infoItem">f / {{ post.f }}</li>
+                      <li class="post-infoItem">{{ post.f }} sec</li>
+                    </ul>
+                    <div class="post-description">{{ post.content }}</div>
+                  </div>
+                  <div class="grid-cell grid-cell--col7">
+                    <div class="post-media">
+                      <img src="{{ post.media }}" />
+                    </div>
+                  </div>
+              </div>
+            </article>
+          {% endif %}
         {% endfor %}
         </section>
       </section>
