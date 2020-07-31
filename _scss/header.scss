@@ -15,10 +15,13 @@
 
 @media (max-width: 600px) {
     .header {
-      width: auto;
-      right: 0;
-      bottom: auto;
-      height: 40px;
-      z-index: 1;
+        width: auto;
+        right: 0;
+        bottom: auto;
+        height: 48px;
+        z-index: 1;
+        display: flex;
+        padding: 0 24px;
+        align-items: center;
     }
   }
