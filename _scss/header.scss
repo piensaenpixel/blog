@@ -6,7 +6,19 @@
     left: 0;
     bottom: 0;
     background:rgba(255, 255, 255, 0.04);
+    padding: 24px;
 }
 .header.open {
     background-color: red;
 }
+
+
+@media (max-width: 600px) {
+    .header {
+      width: auto;
+      right: 0;
+      bottom: auto;
+      height: 40px;
+      z-index: 1;
+    }
+  }

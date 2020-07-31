@@ -46,3 +46,14 @@
 .post-media img {
     width: 100%;
 }
+
+
+
+@media (max-width: 600px) {
+    .post-thumbnail.right .post-media {
+        margin-bottom: 24px;
+    }
+    .post-thumbnail.left .post-media {
+        margin-bottom: 24px;
+    }
+  }

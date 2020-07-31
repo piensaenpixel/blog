@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
 
 .grid {
     display: flex;
@@ -98,7 +104,6 @@
     .grid-cell--col12--mobile {
       flex: 0 0 100%;
       max-width: 100%;
-      margin-bottom: 32px;
     }
     .grid-cell--col6--mobile {
       flex: 0 0 50%;
@@ -113,9 +118,16 @@
   
   @media (max-width: 600px) {
     .container {
-      padding: 0 24px;
+      padding: 64px 24px;
+      position: relative;
     }
     .section {
       padding: 60px 0;
+    }
+    .order-1--mobile {
+        order: 1;
+    }
+    .order-2--mobile {
+        order: 2;
     }
   }
