@@ -11,11 +11,15 @@
         {% for post in site.posts %}
           {% if post.position == 'full' %}
             <article class="post-thumbnail {{post.position}}">
-              <div class="post-media">
-                <img src="{{ post.media }}" />
-              </div>
+
               <div class="grid grid-inner">
-                  <div class="grid-cell grid-cell--col5">
+                  <div class="grid-cell grid-cell--col12">
+                    <div class="post-media">
+                      <img src="{{ post.media }}" />
+                    </div>
+                  </div>
+
+                  <div class="grid-cell grid-cell--col5  grid-cell--col12--mobile">
                     <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <ul class="post-info">
                       <li class="post-infoItem">ISO {{ post.iso }}</li>
@@ -23,7 +27,7 @@
                       <li class="post-infoItem">{{ post.f }} sec</li>
                     </ul>
                   </div>
-                  <div class="grid-cell grid-cell--col7">
+                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
                     <div class="post-description">{{ post.content }}</div>
                   </div>
               </div>
@@ -31,7 +35,7 @@
           {% elsif post.position == 'right' %}
             <article class="post-thumbnail {{post.position}}">
               <div class="grid grid-inner grid-inner--vend">
-                  <div class="grid-cell grid-cell--col5">
+                  <div class="grid-cell grid-cell--col5 grid-cell--col12--mobile">
                     <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <ul class="post-info">
                       <li class="post-infoItem">ISO {{ post.iso }}</li>
@@ -40,7 +44,7 @@
                     </ul>
                     <div class="post-description">{{ post.content }}</div>
                   </div>
-                  <div class="grid-cell grid-cell--col7">
+                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
                     <div class="post-media">
                       <img src="{{ post.media }}" />
                     </div>
