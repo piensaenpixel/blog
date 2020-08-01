@@ -56,16 +56,17 @@
 
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('.js-menu').addEventListener('click', function(e) {
-      console.log("foo");
-      [].map.call(document.querySelectorAll('#site-header'), function(el) {
-        el.classList.toggle('close');
-      });
-    });
+  document.querySelector('.js-menu').addEventListener('click', function(e) {
+    if (document.querySelector('.header ').classList.contains('open')) {
+      document.querySelector('.header').classList.remove('open')
+    } else {
+      document.querySelector('.header').className += ' open'
+    }
+    if (document.querySelector('.bg ').classList.contains('open')) {
+      document.querySelector('.bg').classList.remove('open')
+    } else {
+      document.querySelector('.bg').className += ' open'
+    }
   });
-
-
-
 
 })();
