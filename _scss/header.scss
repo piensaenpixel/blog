@@ -8,6 +8,7 @@
     /*background:rgba(255, 255, 255, 0.04);*/
     padding: 24px;
 }
+
 .header.open {
     background-color: red;
 }
@@ -23,5 +24,13 @@
         display: flex;
         padding: 0 24px;
         align-items: center;
+        justify-content: flex-end;
+        transition: all .3s cubic-bezier(.4,.01,.165,.99);
+    }
+    .header.hide {
+        top: -48px;
+    }
+    .header.bg {
+        background: rgba(0, 0, 0, .72)
     }
   }

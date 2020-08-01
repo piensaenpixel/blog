@@ -7,7 +7,6 @@
     {% include header.html %}
     
     <article class="post-detail {{ page.position}}">
-      {{ page.layout }}
             <div class="post-media">
               <img src="{{ page.media }}" />
             </div>
@@ -26,6 +25,10 @@
             </div>
           </div>
     </article>
+
+
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
 
           <script>
@@ -67,5 +70,7 @@
             officesLayer.addTo(map);
     
         </script>
+        
+
   </body>
 </html>
