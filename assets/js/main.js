@@ -52,4 +52,20 @@
   
   window.addEventListener('scroll', checkScroll);
 
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.js-menu').addEventListener('click', function(e) {
+      console.log("foo");
+      [].map.call(document.querySelectorAll('#site-header'), function(el) {
+        el.classList.toggle('close');
+      });
+    });
+  });
+
+
+
+
 })();

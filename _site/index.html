@@ -14,8 +14,8 @@
 
   <body class="bg">
 
-    <header class="header" id="site-header">
-    <div class="header-action">
+    <header class="header close" id="site-header">
+    <div class="header-action js-menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="6" width="16" height="2" fill="white"/>
             <rect x="4" y="16" width="16" height="2" fill="white"/>
@@ -31,10 +31,9 @@
             <article class="post-thumbnail full">
 
               <div class="grid grid-inner">
-                  <div id="map"></div>
                   <div class="grid-cell grid-cell--col12">
                     <div class="post-media">
-                      <a title="Foto de El sobrecogedor Madrid vacío de Pereira" href="/puerta-del-sol/"></a><img src="/assets/posts/01.png" /></div>
+                      <a title="Foto de El sobrecogedor Madrid vacío de Pereira" href="/puerta-del-sol/"></a><img src="/assets/posts/01.png" />
                     </div>
                   </div>
 
@@ -54,58 +53,13 @@
               </div>
             </article>
           
-
-          <script>
-            // Add basemap and set properties
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: carto.basemaps.darkmatter,
-                center: [-3.70379, 40.416775],
-                zoom:  12
-            });
-            // GEOJSON
-            // Create GeoJSON content
-            const offices = {
-                "type": "FeatureCollection",
-                "features": [
-                    {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-3.70379, 40.416775]
-                        }
-                    }
-                ]
-            };
-    
-            // Define GeoJSON source
-            const officesSource = new carto.source.GeoJSON(offices);
-    
-            // Define Viz object with custom style
-            const officesViz = new carto.Viz(`
-                color: #333
-                width: 8
-            `);
-    
-            // Define map Layer
-            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
-    
-            // Add map Layer
-            officesLayer.addTo(map);
-    
-        </script>
-  
-
-
         
           
             <article class="post-thumbnail left">
               <div class="grid grid-inner grid-inner--vend">
-                <div id="map"></div>
-
                   <div class="grid-cell grid-cell--col5 grid-cell--col12--mobile">
                     <div class="post-media">
-                      <a title="Foto de xxxxx3333" href="/futbol/"></a><img src="/assets/posts/02.png" /></div>
+                      <a title="Foto de xxxxx3333" href="/futbol/"></a><img src="/assets/posts/02.png" />
                     </div>
                   </div>
                   <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
@@ -122,55 +76,10 @@
               </div>
             </article>
           
-
-          <script>
-            // Add basemap and set properties
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: carto.basemaps.darkmatter,
-                center: [-73.944158, 40.678178],
-                zoom:  12
-            });
-            // GEOJSON
-            // Create GeoJSON content
-            const offices = {
-                "type": "FeatureCollection",
-                "features": [
-                    {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-73.944158, 40.678178]
-                        }
-                    }
-                ]
-            };
-    
-            // Define GeoJSON source
-            const officesSource = new carto.source.GeoJSON(offices);
-    
-            // Define Viz object with custom style
-            const officesViz = new carto.Viz(`
-                color: #333
-                width: 8
-            `);
-    
-            // Define map Layer
-            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
-    
-            // Add map Layer
-            officesLayer.addTo(map);
-    
-        </script>
-  
-
-
         
           
             <article class="post-thumbnail right">
               <div class="grid grid-inner grid-inner--vend">
-                <div id="map"></div>
-
                   <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile order-1--mobile">
                     <h2 class="post-title"><a title="Foto de El sobrecogedor Madrid vacío de Pereira" href="/futbol2/">El sobrecogedor Madrid vacío de Pereira</a></h2>
                     <ul class="post-info">
@@ -190,49 +99,6 @@
               </div>
             </article>
           
-
-          <script>
-            // Add basemap and set properties
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: carto.basemaps.darkmatter,
-                center: [-73.944158, 40.678178],
-                zoom:  12
-            });
-            // GEOJSON
-            // Create GeoJSON content
-            const offices = {
-                "type": "FeatureCollection",
-                "features": [
-                    {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [-73.944158, 40.678178]
-                        }
-                    }
-                ]
-            };
-    
-            // Define GeoJSON source
-            const officesSource = new carto.source.GeoJSON(offices);
-    
-            // Define Viz object with custom style
-            const officesViz = new carto.Viz(`
-                color: #333
-                width: 8
-            `);
-    
-            // Define map Layer
-            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
-    
-            // Add map Layer
-            officesLayer.addTo(map);
-    
-        </script>
-  
-
-
         
         </section>
       </section>

@@ -31,6 +31,7 @@
         top: -48px;
     }
     .header.bg {
-        background: rgba(0, 0, 0, .72)
+        background: rgba(0, 0, 0, .72);
+        backdrop-filter: blur(12px);
     }
   }

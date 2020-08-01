@@ -13,10 +13,9 @@
             <article class="post-thumbnail {{post.position}}">
 
               <div class="grid grid-inner">
-                  <div id="map"></div>
                   <div class="grid-cell grid-cell--col12">
                     <div class="post-media">
-                      <a title="Foto de {{ post.title }}" href="{{ post.url }}"></a><img src="{{ post.media }}" /></div>
+                      <a title="Foto de {{ post.title }}" href="{{ post.url }}"></a><img src="{{ post.media }}" />
                     </div>
                   </div>
 
@@ -36,8 +35,6 @@
           {% elsif post.position == 'right' %}
             <article class="post-thumbnail {{post.position}}">
               <div class="grid grid-inner grid-inner--vend">
-                <div id="map"></div>
-
                   <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile order-1--mobile">
                     <h2 class="post-title"><a title="Foto de {{ post.title }}" href="{{ post.url }}">{{ post.title }}</a></h2>
                     <ul class="post-info">
@@ -57,11 +54,9 @@
           {% elsif post.position == 'left' %}
             <article class="post-thumbnail {{post.position}}">
               <div class="grid grid-inner grid-inner--vend">
-                <div id="map"></div>
-
                   <div class="grid-cell grid-cell--col5 grid-cell--col12--mobile">
                     <div class="post-media">
-                      <a title="Foto de {{ post.title }}" href="{{ post.url }}"></a><img src="{{ post.media }}" /></div>
+                      <a title="Foto de {{ post.title }}" href="{{ post.url }}"></a><img src="{{ post.media }}" />
                     </div>
                   </div>
                   <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
@@ -76,49 +71,6 @@
               </div>
             </article>
           {% endif %}
-
-          <script>
-            // Add basemap and set properties
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: carto.basemaps.darkmatter,
-                center: [{{ post.lat }}, {{ post.long }}],
-                zoom:  12
-            });
-            // GEOJSON
-            // Create GeoJSON content
-            const offices = {
-                "type": "FeatureCollection",
-                "features": [
-                    {
-                        "type": "Feature",
-                        "geometry": {
-                            "type": "Point",
-                            "coordinates": [{{ post.lat }}, {{ post.long }}]
-                        }
-                    }
-                ]
-            };
-    
-            // Define GeoJSON source
-            const officesSource = new carto.source.GeoJSON(offices);
-    
-            // Define Viz object with custom style
-            const officesViz = new carto.Viz(`
-                color: #333
-                width: 8
-            `);
-    
-            // Define map Layer
-            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
-    
-            // Add map Layer
-            officesLayer.addTo(map);
-    
-        </script>
-  
-
-
         {% endfor %}
         </section>
       </section>
