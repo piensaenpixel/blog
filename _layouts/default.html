@@ -5,32 +5,27 @@
   <body class="bg">
 
     {% include header.html %}
-
-    <section class="container">
-            <article class="post-thumbnail {{ page.position}}">
-
-              <div class="grid grid-inner">
-                  <div class="grid-cell grid-cell--col12">
-                    <div class="post-media">
-                      <img src="{{ page.media }}" />
-                    </div>
-                  </div>
-
-                  <div class="grid-cell grid-cell--col5  grid-cell--col12--mobile">
-                    <h2 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-                    <ul class="post-info">
-                      <li class="post-infoItem">ISO {{ page.iso }}</li>
-                      <li class="post-infoItem">f / {{ page.f }}</li>
-                      <li class="post-infoItem">{{ page.velocity }} sec</li>
-                    </ul>
-                    <div id="map"></div>
-
-                  </div>
-                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
-                    <div class="post-description">{{ page.content }}</div>
-                  </div>
+    
+    <article class="post-detail {{ page.position}}">
+      {{ page.layout }}
+            <div class="post-media">
+              <img src="{{ page.media }}" />
+            </div>
+          <div class="container">
+            <div class="grid grid-inner">
+              <div class="grid-cell grid-cell--col11  grid-cell--col12--mobile">
+                <h2 class="post-title">{{ page.title }}</h2>
+                <ul class="post-info">
+                  <li class="post-infoItem">ISO {{ page.iso }}</li>
+                  <li class="post-infoItem">f / {{ page.f }}</li>
+                  <li class="post-infoItem">{{ page.velocity }} sec</li>
+                </ul>
+                <div class="post-description">{{ page.content }}</div>
+                <div id="map"></div>
               </div>
-            </article>
+            </div>
+          </div>
+    </article>
 
 
           <script>
@@ -72,10 +67,5 @@
             officesLayer.addTo(map);
     
         </script>
-  
-
-
-        </section>
-      </section>
   </body>
 </html>

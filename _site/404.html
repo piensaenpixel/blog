@@ -17,8 +17,8 @@
     <!-- Make the map visible -->
     <style>
         #map {
-            height: 300px;
-            width: 300px;
+            height: 400px;
+            width: 100%;
             border: 1px solid rgba(255, 255, 255, .04)
         }
     </style>
@@ -35,29 +35,22 @@
     </svg>
 </header>
 
-
-    <section class="container">
-            <article class="post-thumbnail ">
-
-              <div class="grid grid-inner">
-                  <div class="grid-cell grid-cell--col12">
-                    <div class="post-media">
-                      <img src="" />
-                    </div>
-                  </div>
-
-                  <div class="grid-cell grid-cell--col5  grid-cell--col12--mobile">
-                    <h2 class="post-title"><a href="/404.html"></a></h2>
-                    <ul class="post-info">
-                      <li class="post-infoItem">ISO </li>
-                      <li class="post-infoItem">f / </li>
-                      <li class="post-infoItem"> sec</li>
-                    </ul>
-                    <div id="map"></div>
-
-                  </div>
-                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
-                    <div class="post-description"><style type="text/css" media="screen">
+    
+    <article class="post-detail ">
+      default
+            <div class="post-media">
+              <img src="" />
+            </div>
+          <div class="container">
+            <div class="grid grid-inner">
+              <div class="grid-cell grid-cell--col11  grid-cell--col12--mobile">
+                <h2 class="post-title"></h2>
+                <ul class="post-info">
+                  <li class="post-infoItem">ISO </li>
+                  <li class="post-infoItem">f / </li>
+                  <li class="post-infoItem"> sec</li>
+                </ul>
+                <div class="post-description"><style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -78,9 +71,11 @@
   <p>The requested page could not be found.</p>
 </div>
 </div>
-                  </div>
+                <div id="map"></div>
               </div>
-            </article>
+            </div>
+          </div>
+    </article>
 
 
           <script>
@@ -122,10 +117,5 @@
             officesLayer.addTo(map);
     
         </script>
-  
-
-
-        </section>
-      </section>
   </body>
 </html>

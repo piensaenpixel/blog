@@ -17,8 +17,8 @@
     <!-- Make the map visible -->
     <style>
         #map {
-            height: 300px;
-            width: 300px;
+            height: 400px;
+            width: 100%;
             border: 1px solid rgba(255, 255, 255, .04)
         }
     </style>
@@ -35,29 +35,22 @@
     </svg>
 </header>
 
-
-    <section class="container">
-            <article class="post-thumbnail ">
-
-              <div class="grid grid-inner">
-                  <div class="grid-cell grid-cell--col12">
-                    <div class="post-media">
-                      <img src="" />
-                    </div>
-                  </div>
-
-                  <div class="grid-cell grid-cell--col5  grid-cell--col12--mobile">
-                    <h2 class="post-title"><a href="/about/">About</a></h2>
-                    <ul class="post-info">
-                      <li class="post-infoItem">ISO </li>
-                      <li class="post-infoItem">f / </li>
-                      <li class="post-infoItem"> sec</li>
-                    </ul>
-                    <div id="map"></div>
-
-                  </div>
-                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
-                    <div class="post-description">This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+    
+    <article class="post-detail ">
+      page
+            <div class="post-media">
+              <img src="" />
+            </div>
+          <div class="container">
+            <div class="grid grid-inner">
+              <div class="grid-cell grid-cell--col11  grid-cell--col12--mobile">
+                <h2 class="post-title">About</h2>
+                <ul class="post-info">
+                  <li class="post-infoItem">ISO </li>
+                  <li class="post-infoItem">f / </li>
+                  <li class="post-infoItem"> sec</li>
+                </ul>
+                <div class="post-description">This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
@@ -70,9 +63,11 @@ You can find the source code for Jekyll at GitHub:
 
 [jekyll-organization]: https://github.com/jekyll
 </div>
-                  </div>
+                <div id="map"></div>
               </div>
-            </article>
+            </div>
+          </div>
+    </article>
 
 
           <script>
@@ -114,10 +109,5 @@ You can find the source code for Jekyll at GitHub:
             officesLayer.addTo(map);
     
         </script>
-  
-
-
-        </section>
-      </section>
   </body>
 </html>

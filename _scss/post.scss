@@ -25,6 +25,7 @@
     color: rgba(255, 255, 255, 0.64)
 }
 
+
 .post-info {
     display: flex;
 }
@@ -45,6 +46,20 @@
 
 .post-media img {
     width: 100%;
+}
+
+.post-detail .post-media {
+    margin: 80px auto 12px;
+    max-width: 1440px;
+}
+.post-detail  .post-description p {
+    margin-bottom: 24px;
+}
+
+.post-detail  .post-title {
+    margin-bottom: 48px;
+    font-size: 52px;
+    line-height: 64px;
 }
 
 
