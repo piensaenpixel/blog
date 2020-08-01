@@ -5,4 +5,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+    
+    {% if page.layout == 'default' %}
+
+        <!-- Include CARTO VL JS -->
+        <script src="{{ '/assets/js/carto-vl.min.js' | relative_url }}"></script>
+        <!-- Include Mapbox GL JS -->
+        <script src="https://libs.cartocdn.com/mapbox-gl/v0.48.0-carto1/mapbox-gl.js"></script>
+        <!-- Include Mapbox GL CSS -->
+        <link href="https://libs.cartocdn.com/mapbox-gl/v0.48.0-carto1/mapbox-gl.css" rel="stylesheet" />
+        <!-- Make the map visible -->
+        <style>
+            #map {
+                height: 300px;
+                width: 300px;
+                border: 1px solid rgba(255, 255, 255, .04)
+            }
+        </style>
+          {% endif %}
+
+
 </head>

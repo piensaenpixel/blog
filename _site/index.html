@@ -7,6 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+    
+    
+
+
 </head>
 
   <body class="bg">
@@ -26,6 +30,7 @@
             <article class="post-thumbnail full">
 
               <div class="grid grid-inner">
+                  <div id="map"></div>
                   <div class="grid-cell grid-cell--col12">
                     <div class="post-media">
                       <img src="/assets/posts/01.png" />
@@ -48,10 +53,54 @@
             </article>
           
 
+          <script>
+            // Add basemap and set properties
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: carto.basemaps.darkmatter,
+                center: [-3.70379, 40.416775],
+                zoom:  12
+            });
+            // GEOJSON
+            // Create GeoJSON content
+            const offices = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-3.70379, 40.416775]
+                        }
+                    }
+                ]
+            };
+    
+            // Define GeoJSON source
+            const officesSource = new carto.source.GeoJSON(offices);
+    
+            // Define Viz object with custom style
+            const officesViz = new carto.Viz(`
+                color: #333
+                width: 8
+            `);
+    
+            // Define map Layer
+            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
+    
+            // Add map Layer
+            officesLayer.addTo(map);
+    
+        </script>
+  
+
+
         
           
             <article class="post-thumbnail left">
               <div class="grid grid-inner grid-inner--vend">
+                <div id="map"></div>
+
                   <div class="grid-cell grid-cell--col5 grid-cell--col12--mobile">
                     <div class="post-media">
                       <img src="/assets/posts/02.png" />
@@ -71,10 +120,54 @@
             </article>
           
 
+          <script>
+            // Add basemap and set properties
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: carto.basemaps.darkmatter,
+                center: [-73.944158, 40.678178],
+                zoom:  12
+            });
+            // GEOJSON
+            // Create GeoJSON content
+            const offices = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-73.944158, 40.678178]
+                        }
+                    }
+                ]
+            };
+    
+            // Define GeoJSON source
+            const officesSource = new carto.source.GeoJSON(offices);
+    
+            // Define Viz object with custom style
+            const officesViz = new carto.Viz(`
+                color: #333
+                width: 8
+            `);
+    
+            // Define map Layer
+            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
+    
+            // Add map Layer
+            officesLayer.addTo(map);
+    
+        </script>
+  
+
+
         
           
             <article class="post-thumbnail right">
               <div class="grid grid-inner grid-inner--vend">
+                <div id="map"></div>
+
                   <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile order-1--mobile">
                     <h2 class="post-title"><a href="/jekyll/update/2020/07/31/futbol.html">El sobrecogedor Madrid vacío de Pereira</a></h2>
                     <ul class="post-info">
@@ -94,9 +187,54 @@
             </article>
           
 
+          <script>
+            // Add basemap and set properties
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: carto.basemaps.darkmatter,
+                center: [-73.944158, 40.678178],
+                zoom:  12
+            });
+            // GEOJSON
+            // Create GeoJSON content
+            const offices = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-73.944158, 40.678178]
+                        }
+                    }
+                ]
+            };
+    
+            // Define GeoJSON source
+            const officesSource = new carto.source.GeoJSON(offices);
+    
+            // Define Viz object with custom style
+            const officesViz = new carto.Viz(`
+                color: #333
+                width: 8
+            `);
+    
+            // Define map Layer
+            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
+    
+            // Add map Layer
+            officesLayer.addTo(map);
+    
+        </script>
+  
+
+
         
         </section>
       </section>
+
+
+
 
 
 

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  {% include meta-detail.html %}
+
+  <body class="bg">
+
+    {% include header.html %}
+
+    <section class="container">
+            <article class="post-thumbnail {{ page.position}}">
+
+              <div class="grid grid-inner">
+                  <div class="grid-cell grid-cell--col12">
+                    <div class="post-media">
+                      <img src="{{ page.media }}" />
+                    </div>
+                  </div>
+
+                  <div class="grid-cell grid-cell--col5  grid-cell--col12--mobile">
+                    <h2 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
+                    <ul class="post-info">
+                      <li class="post-infoItem">ISO {{ page.iso }}</li>
+                      <li class="post-infoItem">f / {{ page.f }}</li>
+                      <li class="post-infoItem">{{ page.velocity }} sec</li>
+                    </ul>
+                    <div id="map"></div>
+
+                  </div>
+                  <div class="grid-cell grid-cell--col7 grid-cell--col12--mobile">
+                    <div class="post-description">{{ page.content }}</div>
+                  </div>
+              </div>
+            </article>
+
+
+          <script>
+            // Add basemap and set properties
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: carto.basemaps.darkmatter,
+                center: [{{ page.lat }}, {{ page.long }}],
+                zoom:  12
+            });
+            // GEOJSON
+            // Create GeoJSON content
+            const offices = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [{{ page.lat }}, {{ page.long }}]
+                        }
+                    }
+                ]
+            };
+    
+            // Define GeoJSON source
+            const officesSource = new carto.source.GeoJSON(offices);
+    
+            // Define Viz object with custom style
+            const officesViz = new carto.Viz(`
+                color: #333
+                width: 8
+            `);
+    
+            // Define map Layer
+            const officesLayer = new carto.Layer('offices', officesSource, officesViz);
+    
+            // Add map Layer
+            officesLayer.addTo(map);
+    
+        </script>
+  
+
+
+        </section>
+      </section>
+  </body>
+</html>
