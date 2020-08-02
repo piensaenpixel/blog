@@ -1,18 +1,17 @@
 ---
 layout: default
-position: right
-permalink: /futbol2/
-title:  "El sobrecogedor Madrid vacío de Pereira"
+position: full
+permalink: /puerta-del-sol-2/
+title:  "Vamos niño"
 date:   2020-07-31 15:12:41 +0200
 iso: 100
 f: 2,2
 velocity: 1/30
-media: '/assets/posts/02.png'
-lat: -73.944158
-long: 40.678178
+media: '/assets/posts/01.png'
+lat: -3.703790
+long: 40.416775
 keywords: puerta del sol, madrid
-categories: [aluche]
-
+categories: [centro]
 ---
 
 Imagine Plaza Castilla y la Castellana sin un solo coche. Gran Vía, Callao y Sol sin madrileños ni turistas de un sitio a otro. O Cibeles bajo un silencio sepulcral. Ignacio Pereira (Talavera de la Reina, 1980), director creativo y fotógrafo profesional, siempre quiso demostrar que "su ciudad" solo cobra

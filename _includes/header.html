@@ -5,4 +5,18 @@
             <rect x="4" y="16" width="16" height="2" fill="white"/>
         </svg>
     </div>
+    <div class="container">
+        <div class="grid grid-inner">
+          <div class="grid-cell grid-cell--col11  grid-cell--col12--mobile">
+                <nav>
+                    <ul class="nav">
+                        {% for category in site.categories %}
+                            <li class="nav-item nav-item--{{forloop.index}}"><a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html">{{ category | first }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+           </div>
+        </div>
+    </div>
+    <div class="logo"><a href="/">Yo me bajo en Atocha</a></div>
 </header>

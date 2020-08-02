@@ -10,14 +10,72 @@
     transition: all .3s cubic-bezier(.4,.01,.165,.99);
     z-index: 2;
 }
-
+.header .container {
+    opacity: 0;
+}
 .header.open {
     background:rgba(0, 0, 0, 0.98);
     width: 100%;
 }
 .header-action {
     cursor: pointer;
+}
+.header.open .container {
+    opacity: 1;
+}
 
+
+.nav-item {
+    transform: translateY(-5px);
+    opacity: 0;
+    font: 48px/52px 'Canela-Regular', serif;
+    margin-bottom: 32px;
+    color: #fff;
+    transition: all .4s cubic-bezier(.4,.01,.165,.99);
+}
+.nav-item::first-letter {
+    text-transform: uppercase;
+}
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-item a :hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.open .nav-item {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.nav-item--1 {
+    transition-delay: .3s;
+}
+.nav-item--2 {
+    transition-delay: .4s;
+}
+.nav-item--3 {
+    transition-delay: .4s;
+}
+
+.logo {
+    position: absolute;
+    left: 41px;
+    bottom: 24px;
+    font: 14px/16px 'Canela-Regular', serif;
+    color: #fff;
+    transform: rotate(-90deg);
+    width: 400px;
+    transform-origin: left;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+.logo a:hover {
+    text-decoration: underline;
 }
 
 

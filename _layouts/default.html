@@ -5,7 +5,7 @@
   <body class="bg">
 
     {% include header.html %}
-    
+
     <article class="post-detail {{ page.position}}">
             <div class="post-media">
               <img src="{{ page.media }}" />
@@ -14,6 +14,7 @@
             <div class="grid grid-inner">
               <div class="grid-cell grid-cell--col11  grid-cell--col12--mobile">
                 <h2 class="post-title">{{ page.title }}</h2>
+
                 <ul class="post-info">
                   <li class="post-infoItem">ISO {{ page.iso }}</li>
                   <li class="post-infoItem">f / {{ page.f }}</li>
