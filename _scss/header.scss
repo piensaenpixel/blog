@@ -21,6 +21,18 @@
 .header-action {
     cursor: pointer;
 }
+    .header-action .line {
+        transition: all .3s cubic-bezier(.4,.01,.165,.99);
+    }
+    .header-action.open .line-01 {
+        transform-origin: 3px 10px;
+        transform: rotate(45deg);
+    }
+    .header-action.open .line-02 {
+        transform-origin: 8px 16px;
+        transform: rotate(-45deg);
+    }
+
 .header.open .container {
     opacity: 1;
     pointer-events: all;

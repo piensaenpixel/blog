@@ -5,3 +5,13 @@
     .bg.open {
         overflow: hidden;
     }
+
+.footer .container {
+    padding: 0 0 64px 0;
+}
+    .footer-text {
+        font: 12px/14px 'Canela-Regular', serif;
+        font-style: italic;
+        color: rgba(255, 255, 255, .4);
+        text-align: center;;
+    }
