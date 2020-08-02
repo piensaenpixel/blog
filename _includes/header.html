@@ -11,7 +11,7 @@
                 <nav>
                     <ul class="nav">
                         {% for category in site.categories %}
-                            <li class="nav-item nav-item--{{forloop.index}}"><a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html">{{ category | first }}</a></li>
+                            <li class="nav-item nav-item--{{forloop.index}}"><a href="/category/{{ category | first | slugify }}/index.html">{{ category | first }}</a></li>
                         {% endfor %}
                     </ul>
                 </nav>
