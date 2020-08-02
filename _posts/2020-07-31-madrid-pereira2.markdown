@@ -14,7 +14,7 @@ keywords: puerta del sol, madrid
 categories: [centro]
 ---
 
-Imagine Plaza Castilla y la Castellana sin un solo coche. Gran Vía, Callao y Sol sin madrileños ni turistas de un sitio a otro. O Cibeles bajo un silencio sepulcral. Ignacio Pereira (Talavera de la Reina, 1980), director creativo y fotógrafo profesional, siempre quiso demostrar que "su ciudad" solo cobra
+Imagine Plaza Castilla y la Castellana sin un solo coche. Gran Vía, Callao y Sol sin madrileños ni turistas de un sitio a otro. O Cibeles bajo un silencio sepulcral. Ignacio Pereirass (Talavera de la Reina, 1980), director creativo y fotógrafo profesional, siempre quiso demostrar que "su ciudad" solo cobra
 
 <!--more-->
 
