@@ -30,7 +30,7 @@
     if (direction !== prevDirection) {
       toggleHeader(direction, curScroll);
     }
-    if (window.scrollY <= 48) {
+    if (window.scrollY <= 64) {
       header.classList.remove('bg');
     }
     if (window.scrollY >= 120) {
@@ -40,7 +40,7 @@
   };
 
   var toggleHeader = function(direction, curScroll) {
-    if (direction === 2 && curScroll > 48) { 
+    if (direction === 2 && curScroll > 64) { 
       header.classList.add('hide');
       prevDirection = direction;
     }
